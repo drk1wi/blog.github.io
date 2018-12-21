@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I'am a security geek and an occasional developer.	ᕙ(⇀‸↼‶)ᕗ
+I'am a security geek and a developer.	ᕙ(⇀‸↼‶)ᕗ 
 
 ### Contact me
 
