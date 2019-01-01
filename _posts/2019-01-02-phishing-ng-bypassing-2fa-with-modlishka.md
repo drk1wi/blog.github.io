@@ -14,49 +14,47 @@ _Recently there was a lot of rumour about this topic on the Internet, even thoug
 ### "Modlishka" introduction
 
 Over many years of my penetration testing experience, I have found '_social engineering_'  the easiest and most of effective way to get a proper foothold into the internal network of my customers. I know that many APT groups think the same...
-This is all because one definitely does not want to burn a _0day_ exploit/s for all of those sophisticated top-notch security defenses that are protecting the perimeter, when often just few e-mails or phone calls will just do perfectly fine to compromise internal infrastructure and companies sensitive data.  
+This is all because one definitely does not need to burn a _0day_ exploit/s for all of those sophisticated top-notch security defenses that are protecting the perimeter, when often just few e-mails or phone calls will do just perfectly fine to compromise internal infrastructure and companies sensitive data.  
 
 
-Modlishka was written with an aim to make that second approach (for phishing campaigns) as effective as possible.
+Modlishka was written with an aim to make that second approach (phishing campaigns) as effective as possible.
 
-This tool will be very useful to all penetration testers, that want to carry out an effective e-mail phishing campaign (also as part of their red teaming engagements).  
+This tool should be very useful to all penetration testers, that want to carry out an effective phishing campaign (also as part of their red team engagements).  
 
 
 ### "Bypassing 2FA"
 
-Enough with the introductions and lets get into the 'meritum'.
+Enough with the introductions and lets get into the 'merit'.
 
-_Note: This will be an example set up that will locally on your computer, but should get you started with start making adjustments to use it real campaigns._ 
+_Note: This will be an example set up that will run locally on your computer._ 
 
- #### # Fetch the tool and fetch the dependencies
+ #### Fetch the tool and fetch the dependencies
 
-    $ go get -u github.com/drk1wi/Modlishka
-    $ cd $GOPATH/src/github.com/drk1wi/Modlishka/
+`$ go get -u github.com/drk1wi/Modlishka
+$ cd $GOPATH/src/github.com/drk1wi/Modlishka/`
 
     
- #### # Configure the 'autocert' plugin 
+#### Configure the 'autocert' plugin 
  
  This step is required if you want to serve the page over a browser trusted TLS channel:
  
-    $ openssl genrsa -out MyRootCA.key 2048
-    $ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem
+`$ openssl genrsa -out MyRootCA.key 2048
+$ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem`
 
-Replace the _const CA_CERT_ variable with the content of MyRootCA.pem file and _const CA_CERT_KEY_  with the content of MyRootCA.key in the plugin/autocert.go file.
+Replace the _const CA_CERT_ variable with the content of MyRootCA.pem file and _const CA_CERT_KEY_  with the content of MyRootCA.key in the 'plugin/autocert.go' file.
 
-Install and trust the MyRootCA.pem in your browsers certificate store and you are all done.
+Install and set the right trust level for the 'MyRootCA' CA in your browsers certificate store and you are all done.
 
-
- #### # Compile and launch "Modlishka" 
+####  Compile and launch "Modlishka" 
     
-
-    $ make
-    # ./dist/proxy  -config templates/google.com_gsuite.json 
+`$ make
+# ./dist/proxy  -config templates/google.com_gsuite.json`
 
 _A small disclaimer here: I am not encouraging to run campaigns against any particular company. The choice of an example service is purely based on its popularity and my believe that its really well secured. As such I am not trying to prove that is not the case (especially since most of the services can be targeted in a similar way), but to raise an awareness of the risk by using one of the most popular service as a proof of concept._
 
-#### # View the web page in your browser
+#### View the web page in your browser
 
-The following link can be used to view your launched test page. You can notice how the '_ident_' parameter is hidden from the user on a first request - this way you will be able to track all your users sessions:
+The following link can be used to view your launched test page. You can notice how the '_ident_' parameter is hidden from the user on a first request:
 
 [loopback.modlishka.io?ident=user_tracking_param](https://loopback.modlishka.io?ident=user_tracking_param)
 
@@ -71,7 +69,7 @@ Collected credentials can be found in the 'log' file or via one of the included 
 
 You can check the movie here:[https://vimeo.com/308709275](https://vimeo.com/308709275)
 
-#### # Customize your settings
+#### Customize your settings
 
 If you like the tool. You can start adjusting the configuration for your chosen domain.
 Modlishka can be easily customized through a set of available command line options or JSON configuration files.
