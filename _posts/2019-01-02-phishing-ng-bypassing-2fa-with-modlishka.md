@@ -28,7 +28,7 @@ Enough with the introductions and lets get into the 'merit'.
 
 _Note: This will be an example set up that will run locally on your computer._ 
 
-#### 1. Fetch the tool and fetch the dependencies
+#### 1. Fetch the tool 
 
 ```console
 $ go get -u github.com/drk1wi/Modlishka
