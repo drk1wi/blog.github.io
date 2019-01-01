@@ -30,16 +30,16 @@ _Note: This will be an example set up that will run locally on your computer._
 
 #### Fetch the tool and fetch the dependencies
 
->$ go get -u github.com/drk1wi/Modlishka
->$ cd $GOPATH/src/github.com/drk1wi/Modlishka/`
+$ go get -u github.com/drk1wi/Modlishka**
+$ cd $GOPATH/src/github.com/drk1wi/Modlishka/**
 
     
 #### Configure the 'autocert' plugin 
  
  This step is required if you want to serve the page over a browser trusted TLS channel:
  
->$ openssl genrsa -out MyRootCA.key 2048
->$ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem
+$ openssl genrsa -out MyRootCA.key 2048**
+$ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem**
 
 Replace the _const CA_CERT_ variable with the content of MyRootCA.pem file and _const CA_CERT_KEY_  with the content of MyRootCA.key in the 'plugin/autocert.go' file.
 
@@ -47,16 +47,14 @@ Install and set the right trust level for the 'MyRootCA' CA in your browsers cer
 
 ####  Compile and launch "Modlishka" 
     
->$ make
-># ./dist/proxy  -config templates/google.com_gsuite.json`
+$ make
+$ sudo ./dist/proxy  -config templates/google.com_gsuite.json
 
 _A small disclaimer here: I am not encouraging to run campaigns against any particular company. The choice of an example service is purely based on its popularity and my believe that its really well secured. As such I am not trying to prove that is not the case (especially since most of the services can be targeted in a similar way), but to raise an awareness of the risk by using one of the most popular service as a proof of concept._
 
 #### View the web page in your browser
 
-The following link can be used to view your launched test page. You can notice how the '_ident_' parameter is hidden from the user on a first request:
-
-[loopback.modlishka.io?ident=user_tracking_param](https://loopback.modlishka.io?ident=user_tracking_param)
+The following link can be used to view your launched test page. You can notice how the '_ident_' parameter is hidden from the user on a first request: [https://loopback.modlishka.io?ident=user_tracking_param](https://loopback.modlishka.io?ident=user_tracking_param).
 
  Modlishka in action against an example 2FA (SMS) enabled authentication scheme:
 
@@ -73,6 +71,7 @@ Collected credentials can be found in the 'log' file or via one of the included 
 
 If you like the tool. You can start adjusting the configuration for your chosen domain.
 Modlishka can be easily customized through a set of available command line options or JSON configuration files.
+
 Please refer to [wiki](https://github.com/drk1wi/Modlishka/wiki)  pages for further functionality descriptions. 
 
 ### Conclusion
