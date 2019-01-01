@@ -28,18 +28,18 @@ Enough with the introductions and lets get into the 'merit'.
 
 _Note: This will be an example set up that will run locally on your computer._ 
 
- #### Fetch the tool and fetch the dependencies
+#### Fetch the tool and fetch the dependencies
 
-`$ go get -u github.com/drk1wi/Modlishka
-$ cd $GOPATH/src/github.com/drk1wi/Modlishka/`
+>$ go get -u github.com/drk1wi/Modlishka
+>$ cd $GOPATH/src/github.com/drk1wi/Modlishka/`
 
     
 #### Configure the 'autocert' plugin 
  
  This step is required if you want to serve the page over a browser trusted TLS channel:
  
-`$ openssl genrsa -out MyRootCA.key 2048
-$ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem`
+>$ openssl genrsa -out MyRootCA.key 2048
+>$ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem
 
 Replace the _const CA_CERT_ variable with the content of MyRootCA.pem file and _const CA_CERT_KEY_  with the content of MyRootCA.key in the 'plugin/autocert.go' file.
 
@@ -47,8 +47,8 @@ Install and set the right trust level for the 'MyRootCA' CA in your browsers cer
 
 ####  Compile and launch "Modlishka" 
     
-`$ make
-# ./dist/proxy  -config templates/google.com_gsuite.json`
+>$ make
+># ./dist/proxy  -config templates/google.com_gsuite.json`
 
 _A small disclaimer here: I am not encouraging to run campaigns against any particular company. The choice of an example service is purely based on its popularity and my believe that its really well secured. As such I am not trying to prove that is not the case (especially since most of the services can be targeted in a similar way), but to raise an awareness of the risk by using one of the most popular service as a proof of concept._
 
@@ -58,8 +58,9 @@ The following link can be used to view your launched test page. You can notice h
 
 [loopback.modlishka.io?ident=user_tracking_param](https://loopback.modlishka.io?ident=user_tracking_param)
 
+ Modlishka in action against an example 2FA (SMS) enabled authentication scheme:
 
-![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/a08114f83b1a4b9ae4401c4e56a90df9a072be5f.png)
+[![Watch the video](https://i.vimeocdn.com/video/748924166.jpg)](https://vimeo.com/308709275)
 
 Collected credentials can be found in the 'log' file or via one of the included plugins (this includes session impersonation - still in beta though):
 
@@ -67,7 +68,6 @@ Collected credentials can be found in the 'log' file or via one of the included 
 
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/779e2185531eadb81996045fe56952860efd7c08.png)
 
-You can check the movie here:[https://vimeo.com/308709275](https://vimeo.com/308709275)
 
 #### Customize your settings
 
