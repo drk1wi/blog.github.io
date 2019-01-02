@@ -64,6 +64,8 @@ _A small disclaimer here: I am not encouraging to run campaigns against any part
 
 [![Watch the video](https://i.vimeocdn.com/video/749353683.jpg)](https://vimeo.com/308709275)
 
+[https://vimeo.com/308709275](https://vimeo.com/308709275)
+
 The following link can be used to view your launched test page. You can notice how the '_ident_' parameter is hidden from the user on a first request: [https://loopback.modlishka.io?ident=user_tracking_param](https://loopback.modlishka.io?ident=user_tracking_param).
 
 Collected credentials can be found in the 'log' file or via one of the included plugins (this includes session impersonation - still in beta though):
