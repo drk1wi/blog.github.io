@@ -95,5 +95,5 @@ Include lack of user awareness, and it literally means giving away your most val
 _At the end even the most sophisticated security defense systems can fail if there is no sufficient user awareness and vice versa for that matter._
 
 
-Currently, the only way to address this issue, from a technical perspective, is to entirely rely on 2FA hardware tokens, that are based on U2F protocol. You can easily buy them online. 
+Currently, the only way to address this issue, from a technical perspective, is to entirely rely on 2FA hardware tokens, that are based on **U2F** protocol. You can easily buy them online. 
 However, remember, that right user awareness is as equally important.
