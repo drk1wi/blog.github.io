@@ -94,6 +94,17 @@ Include lack of user awareness, and it literally means giving away your most val
 
 _At the end even the most sophisticated security defense systems can fail if there is no sufficient user awareness and vice versa for that matter._
 
+Currently, the only way to address this issue, from a technical perspective, is to entirely rely on 2FA hardware tokens, that are based on **U2F** protocol. You can easily buy them online. However, remember, that right user awareness is as equally important.
 
-Currently, the only way to address this issue, from a technical perspective, is to entirely rely on 2FA hardware tokens, that are based on **U2F** protocol. You can easily buy them online. 
-However, remember, that right user awareness is as equally important.
+Summing it up, you should:
+- use U2F hardware tokens as your second authentication factor.
+- use password managers, that will ensure that domain name in your browser is correct before pasting in the password.
+- constantly raise user awarness about current social engineering techniques.
+
+Why am I releasing this tool?
+I believe that without a working proof of concept, that really proves the point, the risk is treated as theoretical, and no real measures are taken to address it properly. This status quo, and lack of right awareness about the risk, is a perfect situation for malicious actors that will happily exploit it.
+
+This was the case for the past year, since the concept of using a reverse proxy for phishing purposes is not new and was already actively exploited (Amnesty International [report](https://www.amnesty.org/en/latest/research/2018/12/when-best-practice-is-not-good-enough/)).
+
+
+
