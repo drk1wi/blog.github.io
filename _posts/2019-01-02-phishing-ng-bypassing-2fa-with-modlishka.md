@@ -104,7 +104,7 @@ Summing it up, you should:
 Why am I releasing this tool?
 I believe that without a working proof of concept, that really proves the point, the risk is treated as theoretical, and no real measures are taken to address it properly. This status quo, and lack of right awareness about the risk, is a perfect situation for malicious actors that will happily exploit it.
 
-This was the case for the past year, since the concept of using a reverse proxy for phishing purposes is not new and was already actively exploited (Amnesty International [report](https://www.amnesty.org/en/latest/research/2018/12/when-best-practice-is-not-good-enough/)).
+This was the case for the past year, since the concept of using a baisc reverse proxy for phishing purposes was already actively exploited (Amnesty International [report](https://www.amnesty.org/en/latest/research/2018/12/when-best-practice-is-not-good-enough/)). 
 
 
 
