@@ -11,7 +11,5 @@ He specilizes in web and mobile application security, IT security consultancy an
 
 You can get in touch with him here: piotr[\\\@]duszynski.eu. 
 
-ᕙ(⇀‸↼‶)ᕗ 
-
 
 
