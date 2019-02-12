@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About ᕙ(⇀‸↼‶)ᕗ 
+title: About 
 permalink: /about/
 ---
 
@@ -9,7 +9,9 @@ He holds MSc and Bsc(Hons) titles in IT, along with such certificates as OSCE &&
 
 He specilizes in web and mobile application security, IT security consultancy and creating security solutions that are fit for a particular task. 
 
-You can get in touch with him here: piotr[\\\@]duszynski.eu.
+You can get in touch with him here: piotr[\\\@]duszynski.eu. 
+
+ᕙ(⇀‸↼‶)ᕗ 
 
 
 
