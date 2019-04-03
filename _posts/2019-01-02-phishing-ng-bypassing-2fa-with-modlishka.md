@@ -30,7 +30,7 @@ _Note: This will be an example set up that will run locally on your computer._
 
 #### 1. Fetch the tool 
 
-```
+```bash
 $ go get -u github.com/drk1wi/Modlishka
 $ cd $GOPATH/src/github.com/drk1wi/Modlishka/
 ```
@@ -40,7 +40,7 @@ $ cd $GOPATH/src/github.com/drk1wi/Modlishka/
  
  This step is required if you want to serve the page over a browser trusted TLS channel:
  
-```
+```bash
 $ openssl genrsa -out MyRootCA.key 2048`
 $ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem
 ```
@@ -51,7 +51,7 @@ Install and set the right trust level for the 'MyRootCA' CA in your browsers cer
 
 #### 3. Compile and launch "Modlishka" 
     
-```
+```bash
 $ make
 $ sudo ./dist/proxy  -config templates/google.com_gsuite.json
 ```
