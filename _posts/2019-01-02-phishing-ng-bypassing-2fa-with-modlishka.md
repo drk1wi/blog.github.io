@@ -40,7 +40,7 @@ $ cd $GOPATH/src/github.com/drk1wi/Modlishka/
  
  This step is required if you want to serve the page over a browser trusted TLS channel:
  
-```bash
+```
 $ openssl genrsa -out MyRootCA.key 2048`
 $ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem
 ```
@@ -51,10 +51,10 @@ Install and set the right trust level for the 'MyRootCA' CA in your browsers cer
 
 #### 3. Compile and launch "Modlishka" 
     
-```bash
+{% highlight ruby %}
 $ make
 $ sudo ./dist/proxy  -config templates/google.com_gsuite.json
-```
+{% endhighlight %}
 
 _A small disclaimer here: I am not encouraging to run campaigns against any particular company. The choice of an example service is purely based on its popularity and my believe that its really well secured. As such I am not trying to prove that is not the case (especially since most of the services can be targeted in a similar way), but to raise an awareness of the risk by using one of the most popular service as a proof of concept._
 
