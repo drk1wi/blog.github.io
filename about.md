@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Piotr is an IT security consultant, developer and security researcher with more than 10 years of professional experience.
-He holds MSc and Bsc(Hons) titles in IT, along with such certificates as OSCE && OSCP.
+I am a security consultant, developer and researcher with more than 10 years of professional experience.
+I did my MSc and Bsc(Hons) back in the days, along with such certificates as OSCE && OSCP (Really enjoyed the "Try Harder" approach ᕙ(⇀‸↼‶)ᕗ, which I treat a my working motto...)
 
-He specilizes in web and mobile application security, creating creative solutions that are fit for a particular task and general IT security consultancy.
+I specialize in web and mobile application security, crafting creative solutions that are fit for a particular task and IT security consultancy.
 
-You can get in touch with him here: piotr[\\\@]duszynski.eu. 
+You can get in touch with me here: piotr[\\\@]duszynski.eu. 
 
 
 
