@@ -16,6 +16,7 @@ As it appeared, **80%** of the reviewed web applications did not use the HSTS me
 
 
 You can find the paper here: 
+
 ['Hijacking browser TLS traffic through Client Domain Hooking - Piotr Duszynski.pdf'](https://github.com/drk1wi/assets/raw/master/Hijacking%20browser%20TLS%20traffic%20through%20Client%20Domain%20Hooking%20-%20Piotr%20Duszynski.pdf)
 
 _SHA256:c2d9bf2062b310b92cab5971d5c4454e8bc3e288720cf3241da17f885c7ec9ce_
