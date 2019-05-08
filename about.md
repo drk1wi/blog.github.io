@@ -9,7 +9,7 @@ I did my MSc and Bsc(Hons) back in the days, along with such certificates as OSC
 
 I specialize in web and mobile application security, crafting creative solutions that are fit for a particular task and IT security consultancy.
 
-You can get in touch with me here: piotr[\\\@]duszynski.eu. 
+You can get in touch with me here: piotr[\\\@]duszynski.eu |9E92 9F76 EA78 5E87 BF4A  ED87 44C0 8837 D965 7EC4|
 
 
 
