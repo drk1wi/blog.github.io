@@ -20,5 +20,6 @@ You can find the paper here:
 _SHA256:c2d9bf2062b310b92cab5971d5c4454e8bc3e288720cf3241da17f885c7ec9ce_
 
 Along with the paper, I have released an updated version of the ['Modlishka'](https://github.com/drk1wi/Modlishka) tool was released, with capabilities to diagnose browser-based client applications from the described attack perspective. Developers should find this tool helpful in pin pointing and fixing relevant security issues in their applications. 
-You can also find some example attack scenario in the following ["post"](https://blog.duszynski.eu/client-domain-hooking-in-practice/)
+
+You can also find example attack scenarios in the following ["post"](https://blog.duszynski.eu/client-domain-hooking-in-practice/).
 
