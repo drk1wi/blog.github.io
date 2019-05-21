@@ -12,7 +12,7 @@ In this post I will show how to run a simulated, '_Client domain Hooking_' attac
 In order to execute this attack, you will need the following set-up:
 - any active and registered domain name (we will be using '*cdh.modlishka.io*' as an example).
 - a valid wildcard TLS certificate for the domain that we own (it can be either bought or obtained from the "[Let's Encrypt](https://letsencrypt.org/)" service).
-- latest version of [**Modlishka**](https://github.com/drk1wi/Modlishka) v.1.1 reverse proxy.
+- latest version of [Modlishka](https://github.com/drk1wi/Modlishka) v.1.1 reverse proxy.
 - target applications, such as the latest version of Chrome browser and example vulnerable WebView based [mobile applications](https://github.com/drk1wi/WebViewApps).
 
 I will not go through the basic steps of configuring and deploying all of the above mentioned prerequisites. You can find all of the relevant information about it [here](https://github.com/drk1wi/Modlishka/wiki/How-to-use). 
