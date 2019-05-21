@@ -74,7 +74,7 @@ Modlishka diagnose log output:
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/hijacked.png)
 
 
-[![Watch the video](https://i.vimeocdn.com/video/783692472.jpg)](https://vimeo.com/336760747?autoplay=1&loop=1&autopause=0&quality=1080p)
+[![Watch the video](https://i.vimeocdn.com/video/783692472.jpg)](https://vimeo.com/336760747?autoplay=1&quality=1080p)
 
 
 #### 4. iOS mobile app
@@ -84,7 +84,7 @@ Project for this simple mobile application can be found [here](https://github.co
 
 Running this iOS application will have the following effect:
 
-[![Watch the video](https://i.vimeocdn.com/video/783694263.jpg)](https://vimeo.com/336762373?autoplay=1&loop=1&autopause=0&quality=1080p)
+[![Watch the video](https://i.vimeocdn.com/video/783694263.jpg)](https://vimeo.com/336762373?autoplay=1&quality=1080p)
 
  
 #### 5. Android mobile app
@@ -94,7 +94,7 @@ Project for this simple mobile application can be found [here](https://github.co
 
 Running this Android application will have the following effect:
 
-[![Watch the video](https://i.vimeocdn.com/video/783706297.jpg)](https://vimeo.com/336771078?autoplay=1&loop=1&autopause=0&quality=1080p)
+[![Watch the video](https://i.vimeocdn.com/video/783706297.jpg)](https://vimeo.com/336805961?autoplay=1&quality=1080p)
 
 
 #### 6. Hijacking and diagnosing client HTTP Traffic at scale
