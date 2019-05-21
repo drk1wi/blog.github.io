@@ -73,6 +73,7 @@ Open the browser and type in example 'google.com':
 Modlishka diagnose log output:
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/hijacked.png)
 
+Watch the video:
 
 [![Watch the video](https://i.vimeocdn.com/video/783692472.jpg)](https://vimeo.com/336760747?autoplay=1&quality=1080p)
 
@@ -82,7 +83,7 @@ Modlishka diagnose log output:
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
 
-Running this iOS application will have the following effect:
+Running this iOS application will have the following effect (vimeo):
 
 [![Watch the video](https://i.vimeocdn.com/video/783694263.jpg)](https://vimeo.com/336762373?autoplay=1&quality=1080p)
 
@@ -92,7 +93,7 @@ Running this iOS application will have the following effect:
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
 
-Running this Android application will have the following effect:
+Running this Android application will have the following effect (vimeo):
 
 [![Watch the video](https://i.vimeocdn.com/video/783706297.jpg)](https://vimeo.com/336805961?autoplay=1&quality=1080p)
 
