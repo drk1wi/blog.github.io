@@ -46,7 +46,7 @@ Just bear in mind, that not all browsers respect this file.
 
 _Note_: google.com has been chosen for a particular reason. It is one of many domains that do not return HSTS headers (as highlighted in original paper).
 
- #### 2. Run Modlishka in 'Dynamic Mode'
+#### 2. Run Modlishka in 'Dynamic Mode'
 
 Enable the following settings in the JSON configuration file:
 ```bash
@@ -61,7 +61,7 @@ Execute the tool with your prepared configuration file:
 ```
 ![Modlishka running in dynamic mode](https://raw.githubusercontent.com/drk1wi/assets/master/modlishka_hijack_run.png)
 
- #### 3. Test the browser
+#### 3. Test the browser
 
 Open the browser and type in example 'google.com':
 
@@ -77,7 +77,7 @@ Modlishka diagnose log output:
 [![Watch the video](https://i.vimeocdn.com/video/783692472.jpg)](https://vimeo.com/336760747?autoplay=1&quality=1080p)
 
 
- #### 4. iOS mobile app
+#### 4. iOS mobile app
  
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
@@ -87,7 +87,7 @@ Running this iOS application will have the following effect:
 [![Watch the video](https://i.vimeocdn.com/video/783694263.jpg)](https://vimeo.com/336762373?autoplay=1&quality=1080p)
 
  
- #### 5. Android mobile app
+#### 5. Android mobile app
  
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
@@ -95,7 +95,6 @@ Project for this simple mobile application can be found [here](https://github.co
 Running this Android application will have the following effect:
 
 [![Watch the video](https://i.vimeocdn.com/video/783706297.jpg)](https://vimeo.com/336771078?autoplay=1&quality=1080p)
-
 
 
 #### 6. Hijacking and diagnosing client HTTP Traffic at scale
