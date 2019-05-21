@@ -37,7 +37,7 @@ The recommended approach, is to use the [_dnsmasq_](https://wiki.debian.org/HowT
 
 This can be also achieve by simply  modifying your ‘/etc/hosts’ entries and appending the following entry: 
 ```bash
-127.0.0.1 google.pl
+127.0.0.1 google.tld
 ```
 where 127.0.0.1, should be of course replaced with your proxy IP address. 
 Just bear in mind, that not all browsers respect this file.
