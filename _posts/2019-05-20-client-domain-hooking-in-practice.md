@@ -45,6 +45,12 @@ Just bear in mind, that not all browsers respect this file.
 ![Spoofed DNS record](https://raw.githubusercontent.com/drk1wi/assets/master/ping_google.png)
 
 _Note_: google.com has been chosen for a particular reason. It is one of many domains that do not return HSTS headers (as highlighted in original paper).
+Instead there's an 'HTTP 301 Permanent Redirect' returned, that is supposed to internally redirect all future HTTP requests to the target domain. 
+However, this approach has few security related drawbacks:
+- there is always a non-TLS request before a cache entry is set.
+- requests for new resources will result in a new non-TLS request that can be used to hijack the traffic. 
+- once the HTTP 301 has been returned it will be cached permanently by the browser, meaning that all future requests will be **always** automatically sent to an attacker-controlled  domain. You can read more about this issue [here](https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/).  
+
 
 #### 2. Run Modlishka in 'Dynamic Mode'
 
@@ -63,12 +69,15 @@ Execute the tool with your prepared configuration file:
 
 #### 3. Test the browser
 
-Open the browser and type in example 'google.com':
+Open the browser and type in example 'google.com' (ensure that there's no previous HTTP 301 entry in cache for this domain):
 
 
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/req1.png)
 
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/req2.png)
+
+This one is really interesting from the persistency point of view:
+![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/cache_poisoned.png)
 
 Modlishka diagnose log output:
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/hijacked.png)
@@ -119,6 +128,8 @@ Then you can easily inspect if any of your applications are sending non-TLS HTTP
 #### 6.Conclusions
 
 This form of an attack can lead, in certain circumstances , to hijack of both TLS and non-TLS HTTP traffic of browser-based applications without a requirement of constantly running an active network layer attack. 
+
+Furthermore, for some of the urls and under certain conditions, permanent hijack can be achieved, through HTTP 301 cache poisoning. 
 
 Fortunately, there are several things that can be done about this:
 
