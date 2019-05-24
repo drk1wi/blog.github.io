@@ -9,11 +9,11 @@ Combined with the ["Client Domain Hooking"](https://blog.duszynski.eu/hijacking-
 
 ### PoC Video
 
-This how the attack looks from users' perspective: 
+This is how the attack looks from users' perspective: 
 
 [![Watch the video](https://i.vimeocdn.com/video/784953706.jpg)](https://vimeo.com/337756409?autoplay=1&quality=1080p)
 
-Now consider WebViews, embedded browsers or other applications that hide URL address bar.
+Now consider: WebViews, embedded browsers or other applications that hide URL address bar from the UI.
 
 ### HTTP 301 Cache Poisoning - 101
 
