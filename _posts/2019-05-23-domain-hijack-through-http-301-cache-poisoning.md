@@ -96,7 +96,9 @@ Steps:
 
 - HTTP 301 Cache Poisoning can only take place during time when non-TLS HTTP traffic can be intercepted by an attacker (e.g. on an insecure WIFI network).
 - This attack works only for non-TLS URLS/resources that haven't been previously cached by the browser.
-- It will definitely not work when application is using TLS traffic only. Consider disabling all clear-text traffic through the following example plugins: ["Firefox"](https://addons.mozilla.org/en-US/firefox/addon/force-https/), ["Chrome"](https://chrome.google.com/webstore/detail/dpipdndjcofdfhknlfloeokjiooiojoo/).
+- It will definitely not work when application is using TLS traffic only. Users should consider disabling all clear-text traffic through the following example plugins: ["Firefox"](https://addons.mozilla.org/en-US/firefox/addon/force-https/), ["Chrome"](https://chrome.google.com/webstore/detail/dpipdndjcofdfhknlfloeokjiooiojoo/). 
+- HSTS "preload" entry would prevent cache poisoning for a domain that is using it.
+
 
 ### Conclusions
 
