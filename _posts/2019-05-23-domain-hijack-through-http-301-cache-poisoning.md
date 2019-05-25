@@ -107,7 +107,7 @@ This means that through a standard MITM attack, an attacker can set up an arbitr
 
 These entries will always force the browser to connect to an attacker-controlled endpoint, regardless of current network (secure or in-secure) location. On the attacker controlled endpoint a reverse proxy can be set up, that will accept all incoming requests and forward them transparently to the real site. The only indication that something didn't go as it should, would be an incorrect domain name in the URL address bar.
 
-Unfortunately, most of the modern browsers default to 'http', when a new URL is being typed in by the user, which can be further abused in this attack scenario.
+Unfortunately, most of the modern browsers default to 'http', when a new domain name is being typed in by the user, which can be further abused in this attack scenario.
 
 ### Mitigations:
 - Check out my previous blog [post](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/) with suggested mitigation.
