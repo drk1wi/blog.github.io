@@ -90,23 +90,24 @@ Watch the video:
  
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
-In the following example mobile users wouldn't be able to differentiate if the connected website is a legitimate one or not, despite that a TLS connections is being used.
+In the following examples mobile users wouldn't be able to differentiate if the connected website is a legitimate one or not, despite that a TLS connection is being used.
 
 Running this iOS application will have the following effect (vimeo):
 
 [![Watch the video](https://i.vimeocdn.com/video/783694263.jpg)](https://vimeo.com/336762373?autoplay=1&quality=1080p)
-
+Note: Set resolution to 1080p
 
 #### 5. Android mobile app
  
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
-Running this Android application will have the following effect (vimeo):
+Running this Android application will have the following effect:
 
 [![Watch the video](https://i.vimeocdn.com/video/783706297.jpg)](https://vimeo.com/336805961?autoplay=1&quality=1080p)
+Note: Set resolution to 1080p
 
 #### 6. Hijacking and diagnosing client HTTP Traffic at scale
-Hijacking HTTP traffic flow through a single domain is definitely an interesting proof-of-concept of the potential consequences.
+Hijacking HTTP traffic flow for a single domain is definitely an interesting proof-of-concept of the potential consequences.
 However, it's a bit impractical from a usable diagnosis perspective.
 
 In order to improve and automate this process it is recommended to redirect all of the HTTP related traffic to the IP address of our proxy domain 'evil.tld* .
@@ -117,7 +118,7 @@ Example _IPTABLES_ rule, that can be used on your router gateway:
 iptables -t nat -I PREROUTING -p tcp -s client_ip_address --dport 80 -j DNAT --to proxy_server_address:80
 ```
 
-Then you can easily inspect if any of your applications are sending non-TLS HTTP requests that can be used to domain hook your browser-based applications. It's actually a very quick way to evaluate if any of the intercepted non-TLS response can result in domain hooking you application:
+With this approach you can easily inspect if any of your applications are sending non-TLS HTTP requests that can be used to domain hook them. 
 
 ![Client Domain Hooking](https://raw.githubusercontent.com/drk1wi/assets/master/diagnose.png)
 
