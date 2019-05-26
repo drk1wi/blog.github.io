@@ -3,9 +3,9 @@ layout: post
 title: Client Domain Hooking - Example Attack
 ---
 
-In my last blog [post](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/) I have released a paper that described all relevant technical aspects of the '_Client Domain Hooking_' attack, along with a HTTP Strict Transport Security (HSTS) survey made for the TOP 1000 Alexa websites.  
+In my last blog [post](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/) I have released a paper that described all relevant technical aspects of the '_Client Domain Hooking_', along with a HTTP Strict Transport Security (HSTS) survey made for the TOP 1000 Alexa websites.  
 
-In this post I will show how to run a simulated, '_Client domain Hooking_' attack which will be used to evaluate an example browser-based application resistance to this form of an attack.
+In this post I will show how to run a simulated, '_Client domain Hooking_' attack which will be used to evaluate an example browser-based application security posture.
 
 ### "Prerequisites" 
 
@@ -22,7 +22,7 @@ The remaining part of this post will assume that the whole infrastructure and to
 
 ![Client Domain Hooking](https://raw.githubusercontent.com/drk1wi/assets/master/client_domain_hooking.png)
 
-Interception of the HTTP flow through a single non-TLS HTTP request for one of the domains, will indirectly result in a compromise of all future requests in the current browsing session context.
+Interception of the HTTP flow through a single non-TLS HTTP request for one of the domains, will indirectly result in a compromise of all future requests for all new domains in the current browsing session context.
 
 ### "Hijacking HTTP traffic flow"
 
@@ -119,7 +119,7 @@ Example _IPTABLES_ rule, that can be used on your router gateway:
 iptables -t nat -I PREROUTING -p tcp -s client_ip_address --dport 80 -j DNAT --to proxy_server_address:80
 ```
 
-Then you can easily inspect if any of your applications are sending non-TLS HTTP requests that can be potentially hijacked:
+Then you can easily inspect if any of your applications are sending non-TLS HTTP requests that can be used to domain hook your browser-based applications. It's actually a very quick way to evaluate if any of the intercepted non-TLS response can result in domain hooking you application:
 
 ![Client Domain Hooking](https://raw.githubusercontent.com/drk1wi/assets/master/diagnose.png)
 
