@@ -59,7 +59,7 @@ Conclusion: Firefox is currently using per-origin cache, but with some interesti
 
 #### Effective Attack
 
-In general, in order to pollute the 301 cache relevant to the browser address bar one does not simply add an IFRAME or send an XHR through a simple JS code in the background, that's bound to a particular origin.
+In general, in order to effectively pollute the 301 cache relevant to the browser address bar one does not simply add an IFRAME or send an XHR with a JS code that's bound to a particular origin.
 However, we can check if it is possible to find another way to poison an arbitrary number of cache entries in a generic, automated and, preferably, invisible way:
 
 ##### First approach
