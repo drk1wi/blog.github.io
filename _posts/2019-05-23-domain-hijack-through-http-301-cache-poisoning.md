@@ -35,7 +35,7 @@ Next time, when user will type into the browser address bar the URL of the previ
 ![Domain Hijack](https://raw.githubusercontent.com/drk1wi/assets/master/cache_poisoned.png)
 
 
-### Cross Origin Cache Pollution
+### Cross Origin Cache Pollution Through JS
 
 It's actually interesting to see, how browsers respect previously cached HTTP 301 entries between different origins. 
 I did a very quick check for two popular browsers using a standard 'XHR' and 'IFRAME' approach that generated non-TLS HTTP requests from different origins while an active HTTP 301 Cache Poisoning attack was running in the background.
@@ -59,8 +59,8 @@ Conclusion: Firefox is currently using per-origin cache, but with some interesti
 
 #### Effective Attack
 
-In general, in order to pollute the 301 cache relevant to the browser address bar one does not simply run simple JS code in the background.
-We can check if it is possible to find a way to poison an arbitrary number of cache entries in a generic and invisible way:
+In general, in order to pollute the 301 cache relevant to the browser address bar one does not simply add an IFRAME or send an XHR through a simple JS code in the background, that's bound to a particular origin.
+However, we can check if it is possible to find another way to poison an arbitrary number of cache entries in a generic, automated and, preferably, invisible way:
 
 ##### First approach
 
