@@ -8,6 +8,15 @@ I am releasing a paper that describes a new variation of a man-in-the-middle (MI
 
 The technique has been named as "Client Domain Hooking", since it relies on a particular way of achieving client-side communication endpoint persistency by forcing an application to communicate only through a chosen attacker-controlled domain through a single intercepted HTTP request and without breaking applications functionality. This technique was originally implemented in the ['Modlishka' ](https://blog.duszynski.eu/phishing-ng-bypassing-2fa-with-modlishka/) reverse proxy.
 
+The described approach, although very similar to the previously published techniques, has few extra benefits:
+-  HTTP flow does not have to be actively redirected to the proxy through a MITM attack - a single intercpted non-TLS packet will be sufficient to hijack current browsing session.
+-  reverse proxy sever can be located in an arbitrary location (both Internet and Intranet)
+-  TLS layer will be trusted by a client without a requirement of installing any additional CA certificate.
+
+Limitations:
+- Intercepted TLS connections rely on 'bogus' domain names, which can be spotted by the user. 
+- Handling obfuscated JavaScript code is a bit of a challenge and can break the applications functionality.
+
 This paper also contains conclusions from a review of the current security posture of browser-based (desktop and mobile) applications and Top 1000 Alexa web applications from the HTTP Strict Transport Security (HSTS) security mechanism perspective. 
 
 As it appeared, **80%** of the reviewed web applications did not use the HSTS mechanism.
