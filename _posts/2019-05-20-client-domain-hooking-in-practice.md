@@ -134,7 +134,7 @@ Fortunately, there are several things that can be done about this:
 
 There are several mitigation methods that can be used to prevent this form of an attack:
 - For mobile application, remember to forbid all non-TLS traffic without any exceptions.
-- For browsers, you should ensure that HSTS is always used for all of your domain names, preferably an an HSTS 'preload' option registered.
+- For browsers, you should ensure that HSTS is always used for all of your domain names, preferably with a HSTS 'preload' entry.
 - Furthermore, you can use Modlishka with the above described set-up to check if your application cannot be easily domain hooked.
 - End users should consider disabling non-TLS traffic through the following example plugins: ["Firefox"](https://addons.mozilla.org/en-US/firefox/addon/force-https/), "Chrome" (still waiting for approval to the Chrome Store...)
 - More possible solutions are described in the released paper.
