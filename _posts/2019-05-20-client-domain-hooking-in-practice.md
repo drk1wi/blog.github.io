@@ -83,7 +83,6 @@ Modlishka diagnose log output:
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/hijacked.png)
 
 Watch the video:
-
 [![Watch the video](https://i.vimeocdn.com/video/783692472.jpg)](https://vimeo.com/336760747?autoplay=1&quality=1080p)
 
 
@@ -91,21 +90,20 @@ Watch the video:
  
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
+In the following example mobile users wouldn't be able to differentiate if the connected website is a legitimate one or not, despite that a TLS connections is being used.
 
 Running this iOS application will have the following effect (vimeo):
 
 [![Watch the video](https://i.vimeocdn.com/video/783694263.jpg)](https://vimeo.com/336762373?autoplay=1&quality=1080p)
 
- 
+
 #### 5. Android mobile app
  
 Project for this simple mobile application can be found [here](https://github.com/drk1wi/WebViewApps) for the reference.
 
-
 Running this Android application will have the following effect (vimeo):
 
 [![Watch the video](https://i.vimeocdn.com/video/783706297.jpg)](https://vimeo.com/336805961?autoplay=1&quality=1080p)
-
 
 #### 6. Hijacking and diagnosing client HTTP Traffic at scale
 Hijacking HTTP traffic flow through a single domain is definitely an interesting proof-of-concept of the potential consequences.
