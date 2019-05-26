@@ -110,7 +110,7 @@ These entries will always force the browser to connect to an attacker-controlled
 Unfortunately, most of the modern browsers default to 'http', when a new domain name is being typed in by the user, which can be further abused.
 
 ### Mitigations:
-- Check out my previous blog [post](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/) with suggested mitigation.
+- Check out my previous blog [post](https://blog.duszynski.eu/client-domain-hooking-in-practice/) with suggested mitigation.
 
 
 ### References
