@@ -97,7 +97,7 @@ Steps:
 - HTTP 301 Cache Poisoning can only take place during time when non-TLS HTTP traffic can be intercepted by an attacker (e.g. on an insecure WIFI network).
 - This attack works only for non-TLS URLS/resources that haven't been previously cached by the browser.
 - It will definitely not work when application is using TLS traffic only. Users should consider disabling all clear-text traffic through the following example plugins: ["Firefox"](https://addons.mozilla.org/en-US/firefox/addon/force-https/), ["Chrome"](https://chrome.google.com/webstore/detail/dpipdndjcofdfhknlfloeokjiooiojoo/). 
-- HSTS "preload" entry would prevent cache poisoning for a domain that is using it.
+- HSTS "preload" entry will prevent cache poisoning for a domain that is using it.
 
 
 ### Conclusions
@@ -105,9 +105,9 @@ Steps:
 Once HTTP 301 Cache is poisoned it will permanently point chosen non-TLS URLS to an attacker-controlled endpoint, taking priority over DNS resolved queries for the related resource.
 This means that through a standard MITM attack, an attacker can set up an arbitrary cache entries for non-TLS URLS by intercepting a single clear-text HTTP request.
 
-These entries will always force the browser to connect to an attacker-controlled endpoint, regardless of current network (secure or in-secure) location. On the attacker controlled endpoint a reverse proxy can be set up, that will accept all incoming requests and forward them transparently to the real site. The only indication that something didn't go as it should, would be an incorrect domain name in the URL address bar.
+These entries will always force the browser to connect to an attacker-controlled endpoint, regardless of current network (secure or in-secure) location. On the attacker controlled endpoint a reverse proxy can be set up, that will accept all incoming requests and forward them transparently to the real site. 
 
-Unfortunately, most of the modern browsers default to 'http', when a new domain name is being typed in by the user, which can be further abused in this attack scenario.
+Unfortunately, most of the modern browsers default to 'http', when a new domain name is being typed in by the user, which can be further abused.
 
 ### Mitigations:
 - Check out my previous blog [post](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/) with suggested mitigation.
