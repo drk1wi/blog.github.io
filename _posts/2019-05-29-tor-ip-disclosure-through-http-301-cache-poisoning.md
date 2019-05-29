@@ -27,7 +27,10 @@ Furthermore, since it is also possible to carry out an automated cache pollution
 5. As soon user types into the URL address bar one of the previously poisoned entries, e.g. "google.com," browser will use the cache and internally redirect to the tracking URL with an exit-node context identifier.
 6. Exit node will now be able to correlate previously intercepted HTTP request and users' real IP address through the information gathered on the external host that used tracking URL with user identifier. The _evil.tld_ host will have information about all of the IP addresses that were used to access that tracking URL.
 
-Obviously, this gives a possibility to effectively correlate chosen HTTP requests with the client IP address. However, it is also possible to include a dynamic and transparent reverse proxy in this scenario that will try to compromise all further HTTP encrypted traffic that is leaving the TOR exit node. 
+Obviously, this gives a possibility to effectively correlate chosen HTTP requests with the client IP address. This is because the previously generated tracking URL will be requested by the client through the TOR tunell and later, after disconnecting, through a standard ISP connection, because of the poisoned cache entries. 
+
+
+However, it is also possible to include a dynamic and transparent reverse proxy in this scenario that will try to compromise all further HTTP encrypted traffic that is leaving the TOR exit node. 
 A simple IPTABLES redirect rule would be sufficient in this case:
 
 ```bash
