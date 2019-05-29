@@ -43,6 +43,8 @@ Another approach, might rely on injecting modified JavaScript with embed trackin
 ### Conclusions
 The fact that it is possible to achieve certain persistence in browsers cache can be abused to disclose real IP address of the TOR user by a malicious TOR exit node.
 
+Note: A proof-of-concept is currently being prepared and should be released shortly.
+
 Possible mitigation:
 - When connecting through TOR network only use browsers 'private' mode and close it after the TOR session is over.
 - Disable all non-TLS traffic, when routing all OS traffic through the TOR network.
