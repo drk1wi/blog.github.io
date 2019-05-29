@@ -34,7 +34,7 @@ A simple IPTABLES redirect rule would be sufficient in this case:
 iptables -t nat -I POSTROUTING -p tcp --dport 80 -j SNAT --to modlishka_ip_address:80
 ```
 
-Another approach, might rely on injecting modified JavaScript with embed tracking URLS into the relevant non-TLS responses and setting up the right Cache control headers (e.g. to 'Cache-Control: max-age=31536000'). However, it would rely on a single non-TLS domain and wouldn't that effective.
+Another approach, might rely on injecting modified JavaScript with embed tracking URLS into the relevant non-TLS responses and setting up the right Cache control headers (e.g. to 'Cache-Control: max-age=31536000'). However, it would rely on a single non-TLS domain and wouldn't be that effective.
 
 
 ### Conclusions
