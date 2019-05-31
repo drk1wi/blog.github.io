@@ -70,8 +70,7 @@ var w = window.open('http://target.tld', '_blank');
 This code will simply open a new tab, and force a clear-text HTTP request for the 'target.tld', which is sufficient to poison cache entry for a single URL.
 
 Disadvantages:
-- blocked by the pop-up blocker after 1st opened window on Chrome. Yet can be closed through w.close().
-- blocked from the first pop-up attempt on FireFox.
+- blocked from the first pop-up attempt.
 - noisy, even if pop-up blocked is disabled.
 
 ##### Second approach
