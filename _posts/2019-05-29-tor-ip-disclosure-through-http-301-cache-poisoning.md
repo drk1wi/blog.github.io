@@ -3,10 +3,9 @@ layout: post
 title: Disclosing your real TOR IP address through 301 HTTP Redirect Cache Poisoning 
 ---
 
-This blog post describes a practical application of the '[HTTP 301 Cache Poisoning](https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/)" attack that can be used by a malicious TOR exit node to disclose real IP address of the browser-based clients. 
+This blog post describes a practical application of the '[HTTP 301 Cache Poisoning](https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/)" attack that can be used by a malicious TOR exit node to disclose real IP address of browser-based clients. 
 
-Persistence and possibility to automate HTTP 301 cache poisoning for arbitrary non-TLS URLS is the key element here, which makes this possible...
-
+Persistence and possibility to automate HTTP 301 cache poisoning for chosen non-TLS URLS is the key element here...
 
 ### PoC Video
 
@@ -16,9 +15,9 @@ Persistence and possibility to automate HTTP 301 cache poisoning for arbitrary n
 - TOR exit node IP address: 51.38.150.126
 - Transparent Reverse Proxy: tor.modlishka.io ([Modlishka](https://github.com/drk1wi/Modlishka))
 
-Note: In this scenario Chrome was configured, through SOCKS5 settings, to use the TOR network. Tor circuit was using a particular TOR exit node: '51.38.150.126'. This is also just a proof-of-concept and many things could be further optimized...
+Note: In this scenario Chrome was configured, through SOCKS5 settings, to use the TOR network. Tor circuit was set to a particular TOR exit node: '51.38.150.126'. This is also still a proof-of-concept and many things can be further optimized...
 
-On the malicious TOR exit node all of the traffic is being redirect to Modlishka.
+On the malicious TOR exit node all of the traffic is being redirect to Modlishka proxy:
 ```javascript
 iptables -A OUTPUT -p tcp -m tcp --dport 80 -j DNAT --to-destination ip_address:80
 iptables -A FORWARD -j ACCEPT
@@ -31,7 +30,7 @@ iptables -A FORWARD -j ACCEPT
 ### Example Attack Scenario Description
 
 Assumptions:
-- Browser-based application (in this case a standard browser) that will connect through the TOR network and, eventually, through a malicious TOR exit node.
+- Browser-based application (in this case a standard browser) that will connect through the TOR network and, finally, through a malicious TOR exit node.
 - Malicious TOR exit node that is intercepting and HTTP 301 cache poisoning all of the non-tls HTTP traffic.
 
 ![Disclosing TOR client IP address](https://raw.githubusercontent.com/drk1wi/assets/master/tor_ip.png)
@@ -49,14 +48,14 @@ Furthermore, since it is also possible to carry out an automated cache pollution
 
 Obviously, this gives a possibility to effectively correlate chosen HTTP requests with the client IP address by the TOR exit node. This is because the previously generated tracking URL will be requested by the client through the TOR tunell and later, after disconnecting, through a standard ISP connection, because of the poisoned cache entries. 
 
-Another approach, might rely on injecting modified JavaScript with embed tracking URLS into the relevant non-TLS responses and setting up the right Cache control headers (e.g. to 'Cache-Control: max-age=31536000'). However, it would rely on a single non-TLS domain and wouldn't be that effective.
+Another approach, might rely on injecting modified JavaScript with embeded tracking URLS into the relevant non-TLS responses and setting up the right Cache control headers (e.g. to 'Cache-Control: max-age=31536000'). However, it would rely on a single non-TLS domain and wouldn't be that effective.
 
-Tracking users through standard cookies, by different web applications is also possible, but it's not easy to force the client to visit the same, attacker-controlled, domain twice: once while it's connecting through the TOR exit node and later after it switched back to the standard ISP connection. Except for Google... I am sure they can use this approach...
+Tracking users through standard cookies, by different web applications is also possible, but it's not easy to force the client to visit the same, attacker-controlled, domain twice: once while it's connecting through the TOR exit node and later after it switched back to the standard ISP connection. 
 
 
 ### Conclusions
-The fact that it is possible to achieve certain persistence in browsers cache can be abused by an attacker to disclose real IP address of the TOR users through malicious TOR exit nodes.
-An attempt can be also made to 'domain hook' some of the browser-based clients and hope that a mistyped domain name will not be noticed by the user.
+The fact that it is possible to achieve certain persistence in browsers cache can be abused by an attacker to disclose real IP address of the TOR users through malicious TOR exit nodes. Poisoning a significant number of popular domain name cache entries will increase the chances of recieving a callback HTTP request (with user identifier).
+An attempt can be also made to 'domain hook' some of the clienst and hope that a mistyped domain name will not be noticed by the user.
 
 
 Possible mitigation:
