@@ -87,8 +87,8 @@ On the side note, it's definitely not the only possible approach, but it seems l
 
 Steps:
 
-1. Redirect the page (location.href='http://first-domain.tld?js=payload') and pass a JavaScript payload that will also contain an array of target URLS. 
-2. The content of this parameter will be taken by the proxy and reflected back in the response. 
+1. Redirect the page (location.href='http://first-domain.tld#js=payload') and pass a JavaScript payload that will also contain an array of target URLS. 
+2. The content of this parameter will be taken by the JS injected proxy and reflected back in the response. 
 3. The JS payload will be executed in the context of target origin, which would be again a simple redirect, through the 'location.href', with an argument popped from the array.
 
 
