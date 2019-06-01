@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Disclosing your real TOR IP address through 301 HTTP Redirect Cache Poisoning 
+title: Disclosing TOR users' real IP address through 301 HTTP Redirect Cache Poisoning 
 ---
 
 This blog post describes a practical application of the '[HTTP 301 Cache Poisoning](https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/)" attack that can be used by a malicious TOR exit node to disclose real IP address of chosen  clients. 
 
-Persistence and possibility to automate HTTP 301 cache poisoning for chosen non-TLS URLS is the key element here ...
+Persistency and possibility to automate HTTP 301 cache poisoning for chosen non-TLS URLS is the key element here.
 
 ### PoC Video
 
@@ -13,9 +13,9 @@ Persistence and possibility to automate HTTP 301 cache poisoning for chosen non-
 - Client real IP address: 5.60.164.177 
 - Client tracking parameter: 6b48c94a-cf58-452c-bc50-96bace981b27 
 - TOR exit node IP address: 51.38.150.126
-- Transparent Reverse Proxy: tor.modlishka.io ([Modlishka](https://github.com/drk1wi/Modlishka) - updated code will be released.)
+- Transparent Reverse Proxy: tor.modlishka.io ([Modlishka](https://github.com/drk1wi/Modlishka) - updated code to be released.)
 
-Note: In this scenario Chrome was configured, through SOCKS5 settings, to use the TOR network. Tor circuit was set to a particular TOR exit node: '51.38.150.126'. This is also still a proof-of-concept and many things can be further optimized...
+Note: In this scenario Chrome was configured, through SOCKS5 settings, to use the TOR network. Tor circuit was set to a particular TOR test exit node: '51.38.150.126'. This is also a proof-of-concept and many things can be further optimized...
 
 On the malicious TOR exit node all of the traffic is being redirect to Modlishka proxy:
 ```javascript
@@ -54,7 +54,7 @@ Tracking users through standard cookies, by different web applications is also p
 
 
 ### Conclusions
-The fact that it is possible to achieve certain persistence in browsers cache, by injecting poisoned entries, can be abused by an attacker to disclose real IP address of the TOR users that send any non-TLS HTTP traffic through malicious TOR exit nodes. Furthermore, poisoning a significant number of popular domain names will increase the chances of recieving a callback HTTP request (with user identifier), that will allow to disclose users real IP.
+The fact that it is possible to achieve certain persistency in browsers cache, by injecting poisoned entries, can be abused by an attacker to disclose real IP address of the TOR users that send non-TLS HTTP traffic through malicious exit nodes. Furthermore, poisoning a significant number of popular domain names will increase the likelihood of recieving a callback HTTP request (with assigned user identifier), that will allow to disclose users real IP.
 An attempt can be also made to 'domain hook' some of the browser-based clients and hope that a mistyped domain name will not be noticed by the user or will not be displayed (e.g. mobile application WebViews).
 
 
