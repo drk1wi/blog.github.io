@@ -13,7 +13,7 @@ Persistence and possibility to automate HTTP 301 cache poisoning for chosen non-
 - Client real IP address: 5.60.164.177 
 - Client tracking parameter: 6b48c94a-cf58-452c-bc50-96bace981b27 
 - TOR exit node IP address: 51.38.150.126
-- Transparent Reverse Proxy: tor.modlishka.io ([Modlishka](https://github.com/drk1wi/Modlishka))
+- Transparent Reverse Proxy: tor.modlishka.io ([Modlishka](https://github.com/drk1wi/Modlishka) - updated code will be released.)
 
 Note: In this scenario Chrome was configured, through SOCKS5 settings, to use the TOR network. Tor circuit was set to a particular TOR exit node: '51.38.150.126'. This is also still a proof-of-concept and many things can be further optimized...
 
