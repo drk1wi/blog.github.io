@@ -5,7 +5,7 @@ title: Disclosing Tor users' real IP address through 301 HTTP Redirect Cache Poi
 
 This blog post describes a practical application of the '[HTTP 301 Cache Poisoning](https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/)" attack that can be used by a malicious Tor exit node to disclose real IP address of chosen  clients. 
 
-Persistency and possibility to automate HTTP 301 cache poisoning for chosen non-TLS URLS is the key element here.
+Persistency of cache entries and possibility to automate HTTP 301 cache poisoning for chosen non-TLS URLS is the key element here.
 
 ### PoC Video
 
