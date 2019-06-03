@@ -62,6 +62,9 @@ Possible mitigation:
 - Do not route all of your OS traffic through Tor without ensuring that there TLS traffic only...
 - Use latest version of the Tor browser whenever possible for browsing web pages.
 
+### Thank you
+This research was partially sponsored by [FortConsult](https://fortconsult.net/), which made the development of the final proof-of-concept possible. 
+
 ### References
 - [https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/](https://blog.duszynski.eu/domain-hijack-through-http-301-cache-poisoning/) - "HTTP 301 Cache Poisoning Attack"
 - [https://www.torproject.org/download/](https://www.torproject.org/download/) - "Tor Browser"
