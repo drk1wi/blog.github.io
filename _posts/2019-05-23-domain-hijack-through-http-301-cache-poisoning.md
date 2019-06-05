@@ -4,7 +4,7 @@ title:  Permanent URL Hijack Through 301 HTTP Redirect Cache Poisoning
 ---
 
 This blog post describes an interesting technique of abusing the standard HTTP 301 responses ("Permanent redirect") to poison browser cache and achieve endpoint persistence for chosen non-TLS resources.
-Combined with the ["Client Domain Hooking"](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/) attack, this has an interesting impact from the security point of view.
+Combined with the ["Client Domain Hooking"](https://blog.duszynski.eu/hijacking-browser-tls-traffic-through-client-domain-hooking/), this has an interesting impact from the security point of view.
 
 
 ### PoC Video
