@@ -7,9 +7,8 @@ This blog post is an introduction to the reverse proxy "Modlishka" tool, that I 
 I hope that this software will reinforce the fact that social engineering is a serious threat, and cannot be treated lightly.
 
 
-On the page below I will shortly describe how this tool can be used to bypass most of the currently used 2FA authentication schemes.
+On the page below, I will shortly describe how it is possible tool to bypass most of the currently used 2FA authentication schemes, including OTP token interception and post authentication user session hijack.
 
-_Recently there was a lot of rumour about this topic on the Internet, even though this technique has been around and exploited for quite while already._
 
 ### "Modlishka" introduction
 
@@ -17,7 +16,7 @@ Over many years of my penetration testing experience, I have found '_social engi
 This is all because one definitely does not need to burn a _0day_ exploit/s for all of those sophisticated top-notch security defenses that are protecting the perimeter, when often just few e-mails or phone calls will do just perfectly fine to compromise internal infrastructure and companies sensitive data.  
 
 
-Modlishka was written with an aim to make that second approach (phishing campaigns) as effective as possible.
+Modlishka was written with an aim to make that second approach (ethical phishing campaigns) as effective as possible and to show that current 2FA does not protect well against this form of an attack.
 
 This tool should be very useful to all penetration testers, that want to carry out an effective phishing campaign (also as part of their red team engagements).  
 
@@ -68,7 +67,7 @@ _A small disclaimer here: I am not encouraging to run campaigns against any part
 
 The following link can be used to view your launched test page. You can notice how the '_ident_' parameter is hidden from the user on a first request: [https://loopback.modlishka.io?ident=user_tracking_param](https://loopback.modlishka.io?ident=user_tracking_param).
 
-Collected credentials can be found in the 'log' file or via one of the included plugins (this includes session impersonation - still in beta though):
+Collected credentials, 2FA tokens and all other requests (for all related domains) can be found in the 'log' file or in one of the included plugins (this includes session impersonation proof-of-concept - still in beta though):
 
 ![alt text](https://raw.githubusercontent.com/drk1wi/assets/master/7d0426a133a85a46a76a424574bf5a2acf99815e.png)
 
@@ -102,9 +101,10 @@ Summing it up, you should:
 - constantly raise user awarness about current social engineering techniques.
 
 Why am I releasing this tool?
-I believe that without a working proof of concept, that really proves the point, the risk is treated as theoretical, and no real measures are taken to address it properly. This status quo, and lack of right awareness about the risk, is a perfect situation for malicious actors that will happily exploit it.
+I believe that without a working proof of concept, that really proves the point, the risk is treated as theoretical, and no real measures are taken to address it properly. This status quo, and lack of right awareness about the risk, is a perfect situation for malicious actors that will happily exploit it*. 
+This concerns both currently used 2FA schemes as well user awareness.
 
-This was the case for the past year, since the concept of using a basic reverse proxy for phishing purposes was already actively exploited (Amnesty International [report](https://www.amnesty.org/en/latest/research/2018/12/when-best-practice-is-not-good-enough/)). 
+*This was the case for the past year, since the concept of using a basic reverse proxy for phishing purposes was already actively exploited (Amnesty International [report](https://www.amnesty.org/en/latest/research/2018/12/when-best-practice-is-not-good-enough/)). 
 
 
 
