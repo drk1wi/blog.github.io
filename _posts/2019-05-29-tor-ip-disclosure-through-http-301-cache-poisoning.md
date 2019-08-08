@@ -60,7 +60,7 @@ Possible mitigation:
 - When connecting through the Tor network ensure that all non-TLS traffic is disabled. Example browser plugins that can be used: ["Firefox"](https://addons.mozilla.org/en-US/firefox/addon/force-https/), ["Chrome"](https://chrome.google.com/webstore/detail/dpipdndjcofdfhknlfloeokjiooiojoo/). 
 - Additionally, always use browser 'private' mode for browsing through Tor.
 - Do not route all of your OS traffic through Tor without ensuring that there TLS traffic only...
-- Use latest version of the Tor browser whenever possible for browsing web pages.
+- Use latest version of the Tor browser whenever possible for browsing web pages (preferably with disabled non-TLS traffic, otherwise some risks like HTTP browsing session hijack may apply).
 
 ### Thank you
 This research was partially sponsored by [FortConsult](https://fortconsult.net/), which made the development of the final proof-of-concept possible. 
